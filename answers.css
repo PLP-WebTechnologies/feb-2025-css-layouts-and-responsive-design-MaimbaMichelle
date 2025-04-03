@@ -1,0 +1,158 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Section */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Navigation Bar Styling with Flexbox */
+nav {
+    background-color: #444;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #777;
+    border-radius: 5px;
+}
+
+/* Main Section Styling */
+main {
+    padding: 20px;
+    background-color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Flexbox Layout for Sections */
+.section-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px;
+    justify-content: space-between;
+}
+
+section {
+    flex: 1;
+    min-width: 300px; /* Ensure sections don't shrink too much */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Form Styling */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 500px;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically on small screens */
+    }
+
+    .section-container {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    section {
+        margin-bottom: 20px; /* Add space between sections on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em; /* Reduce font size for smaller screens */
+    }
+
+    .navbar a {
+        font-size: 1.1em; /* Smaller font for navbar items */
+    }
+
+    form {
+        padding: 15px; /* Less padding for small screens */
+    }
+}
